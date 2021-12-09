@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    String title = "FESTIX";
     return MaterialApp(
-      title: 'Flutter Demo',
+
+      debugShowCheckedModeBanner:false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      home: Home(title),
     );
   }
 }

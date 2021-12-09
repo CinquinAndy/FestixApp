@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 
 class MainPersonnalizedScafold extends StatelessWidget {
   Widget content;
+  String title;
 
-
-  MainPersonnalizedScafold(this.content, {Key? key}) : super(key: key);
+  MainPersonnalizedScafold(this.content, this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +25,17 @@ class MainPersonnalizedScafold extends StatelessWidget {
                     child: Container(
                       child: Container(
                         // ****************************** Gradient Mid left
-                        child: Scaffold(
-                          backgroundColor: Colors.transparent,
-                          appBar: AppBar(
-                            title: const BoxText.heading2("FESTIX"),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Scaffold(
                             backgroundColor: Colors.transparent,
-                            elevation: 0.0,
+                            appBar: AppBar(
+                              centerTitle: true,
+                              title: BoxText.heading2(title),
+                              backgroundColor: Colors.transparent,
+                              elevation: 0.0,
+                            ),
+                            body: content,
                           ),
                         ),
                         decoration: const BoxDecoration(

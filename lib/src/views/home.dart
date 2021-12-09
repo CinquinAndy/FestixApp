@@ -4,16 +4,18 @@ import 'package:flutter/material.dart';
 import '../../box_ui.dart';
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  final String title;
+
+  const Home(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MainPersonnalizedScafold(
         ListView(
-          padding: const EdgeInsets.symmetric(
-              horizontal: 25, vertical: 30),
-          children: const [BoxText.bodyDesc('Design PATATE')],
-        )
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
+          children: [BoxText.bodyDesc("Test texte !")],
+        ),
+        title
     );
   }
 }
