@@ -90,3 +90,6 @@ flutter:
         - asset: assets/fonts/RedHatDisplay-SemiBoldItalic.ttf
           weight: 600
           style: italic
+
+  assets:
+    - assets/images/
