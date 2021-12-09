@@ -8,7 +8,8 @@ class MainPersonnalizedScafold extends StatelessWidget {
   Widget content;
   String title;
 
-  MainPersonnalizedScafold(this.content, this.title, {Key? key}) : super(key: key);
+  MainPersonnalizedScafold(this.content, this.title, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

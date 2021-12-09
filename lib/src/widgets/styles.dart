@@ -27,28 +27,28 @@ const TextStyle heading4Style = TextStyle(
 
 const TextStyle heading5Style = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: FontWeight.w700,
     letterSpacing: 2);
 
 // Base
 const TextStyle bodyBaseTextStyle = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: FontWeight.w500,
     letterSpacing: 2);
 
 // Subtitle / description
 const TextStyle bodySubTextStyle = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 14,
+    fontSize: 10,
     fontWeight: FontWeight.w400,
     letterSpacing: 2);
 
 // description - + interlettrage
 const TextStyle bodyDescTextStyle = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 14,
+    fontSize: 10,
     fontWeight: FontWeight.w400,
     letterSpacing: 10,
     color: kcGrey300Color);

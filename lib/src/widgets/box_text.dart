@@ -6,16 +6,29 @@ class BoxText extends StatelessWidget {
   final String text;
   final TextStyle style;
 
-  const BoxText.heading1(this.text) : style = heading1Style;
-  const BoxText.heading2(this.text) : style = heading2Style;
-  const BoxText.heading3(this.text) : style = heading3Style;
-  const BoxText.heading4(this.text) : style = heading4Style;
-  const BoxText.heading5(this.text) : style = heading5Style;
-  const BoxText.bodySub(this.text) : style = bodySubTextStyle;
-  const BoxText.bodyDesc(this.text) : style = bodyDescTextStyle;
+  BoxText.heading1(this.text, {Key? key, Color color = kcGrey50Color})
+      : style = heading1Style.copyWith(color: color), super(key: key);
 
-  BoxText.body(this.text, {Color color = kcBlue500Color})
-      : style = bodyBaseTextStyle.copyWith(color: color);
+  BoxText.heading2(this.text, {Key? key, Color color = kcGrey50Color})
+      : style = heading2Style.copyWith(color: color), super(key: key);
+
+  BoxText.heading3(this.text, {Key? key, Color color = kcGrey50Color})
+      : style = heading3Style.copyWith(color: color), super(key: key);
+
+  BoxText.heading4(this.text, {Key? key, Color color = kcGrey50Color})
+      : style = heading4Style.copyWith(color: color), super(key: key);
+
+  BoxText.heading5(this.text, {Key? key, Color color = kcGrey50Color})
+      : style = heading5Style.copyWith(color: color), super(key: key);
+
+  BoxText.bodySub(this.text, {Key? key, Color color = kcGrey50Color})
+      : style = bodySubTextStyle.copyWith(color: color), super(key: key);
+
+  BoxText.bodyDesc(this.text, {Key? key, Color color = kcGrey50Color})
+      : style = bodyDescTextStyle.copyWith(color: color), super(key: key);
+
+  BoxText.body(this.text, {Key? key, Color color = kcGrey50Color})
+      : style = bodyBaseTextStyle.copyWith(color: color), super(key: key);
 
   @override
   Widget build(BuildContext context) {
