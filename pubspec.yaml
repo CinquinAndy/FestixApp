@@ -53,30 +53,40 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   fonts:
-    - family: RedHatText
+    - family: RedHatDisplay
       fonts:
-        - asset: assets/fonts/RedHatText-Bold.ttf
+        - asset: assets/fonts/RedHatDisplay-Black.ttf
+          weight: 900
+        - asset: assets/fonts/RedHatDisplay-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/RedHatDisplay-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/RedHatDisplay-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/RedHatDisplay-Bold.ttf
           weight: 700
-        - asset: assets/fonts/RedHatText-BoldItalic.ttf
+        - asset: assets/fonts/RedHatDisplay-BoldItalic.ttf
           weight: 700
           style: italic
-        - asset: assets/fonts/RedHatText-Regular.ttf
+        - asset: assets/fonts/RedHatDisplay-Regular.ttf
           weight: 400
-        - asset: assets/fonts/RedHatText-Italic.ttf
+        - asset: assets/fonts/RedHatDisplay-Italic.ttf
           weight: 400
           style: italic
-        - asset: assets/fonts/RedHatText-Light.ttf
+        - asset: assets/fonts/RedHatDisplay-Light.ttf
           weight: 300
-        - asset: assets/fonts/RedHatText-LightItalic.ttf
+        - asset: assets/fonts/RedHatDisplay-LightItalic.ttf
           weight: 300
           style: italic
-        - asset: assets/fonts/RedHatText-Medium.ttf
+        - asset: assets/fonts/RedHatDisplay-Medium.ttf
           weight: 500
-        - asset: assets/fonts/RedHatText-MediumItalic.ttf
+        - asset: assets/fonts/RedHatDisplay-MediumItalic.ttf
           weight: 500
           style: italic
-        - asset: assets/fonts/RedHatText-SemiBold.ttf
+        - asset: assets/fonts/RedHatDisplay-SemiBold.ttf
           weight: 600
-        - asset: assets/fonts/RedHatText-SemiBoldItalic.ttf
+        - asset: assets/fonts/RedHatDisplay-SemiBoldItalic.ttf
           weight: 600
           style: italic
