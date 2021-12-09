@@ -16,7 +16,7 @@ class CardCustom extends StatelessWidget {
           ),
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(30.0),
               child: ListTile(
                 leading: const SizedBox(
                     child: FlutterLogo(), height: double.infinity),

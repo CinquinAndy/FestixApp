@@ -21,7 +21,7 @@ const TextStyle heading3Style = TextStyle(
 
 const TextStyle heading4Style = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 24,
+    fontSize: 14,
     fontWeight: FontWeight.w700,
     letterSpacing: 2);
 
