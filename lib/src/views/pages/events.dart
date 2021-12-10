@@ -1,17 +1,14 @@
 import 'package:b3_festix/src/shared/app_colors.dart';
-import 'package:b3_festix/src/shared/shape_custom.dart';
-import 'package:b3_festix/src/views/background_custom.dart';
-import 'package:b3_festix/src/views/card/alternative_card_custom.dart';
-import 'package:b3_festix/src/views/card/basic_card_custom.dart';
-import 'package:b3_festix/src/views/navbar/navigation_bar_custom.dart';
+import 'package:b3_festix/src/views/components/background_custom.dart';
+import 'package:b3_festix/src/views/components/card/alternative_card_custom.dart';
+import 'package:b3_festix/src/views/components/card/basic_card_custom.dart';
+import 'package:b3_festix/src/views/components/navbar/navigation_bar_custom.dart';
 import 'package:flutter/material.dart';
 
-import '../../box_ui.dart';
-
-class Home extends StatelessWidget {
+class Event extends StatelessWidget {
   final String title;
 
-  const Home(this.title, {Key? key}) : super(key: key);
+  const Event(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +18,7 @@ class Home extends StatelessWidget {
         children: [
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: const [
                 SizedBox(
                   height: 200,
@@ -39,6 +36,9 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
                   // width: 100,
                   height: 240,
                   child: AlternativeCardCustom(
@@ -52,6 +52,9 @@ class Home extends StatelessWidget {
                       color: kcGrey50Color,
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 SizedBox(
                   height: 200,

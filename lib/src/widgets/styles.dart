@@ -21,20 +21,20 @@ const TextStyle heading3Style = TextStyle(
 
 const TextStyle heading4Style = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: FontWeight.w700,
     letterSpacing: 2);
 
 const TextStyle heading5Style = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: FontWeight.w700,
     letterSpacing: 2);
 
 // Base
 const TextStyle bodyBaseTextStyle = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: FontWeight.w500,
     letterSpacing: 2);
 

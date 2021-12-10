@@ -2,7 +2,8 @@ import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
-import '../../../../box_ui.dart';
+import '../../../../../box_ui.dart';
+
 
 class ListTileUpper extends StatelessWidget {
   final String mainTitle;
@@ -49,6 +50,7 @@ class ListTileUpper extends StatelessWidget {
                   color: kcGrey300Color,
                 ),
                 trailing: iconTrailing,
+
               ),
             ),
           ),
