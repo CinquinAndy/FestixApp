@@ -30,6 +30,7 @@ const Color kbgPurpleAltColor = Color(0x777C3AED);
 const Color kbgGreenColor = Color(0x99059669);
 const Color kbgBlueColor = Color(0x994F46E5);
 const Color kbgGreyColor = Color(0xff080708);
+const Color kbgGreyTransparentColor = Color(0x99080708);
 
 
 const Color kbgTransparentColor = Color(0x00000000);

@@ -5,10 +5,10 @@ import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class MainPersonnalizedScafold extends StatelessWidget {
-  Widget content;
-  String title;
+  final Widget content;
+  final String title;
 
-  MainPersonnalizedScafold(this.content, this.title, {Key? key})
+  const MainPersonnalizedScafold({Key? key, required this.content, required this.title})
       : super(key: key);
 
   @override

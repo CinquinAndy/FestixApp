@@ -52,3 +52,11 @@ const TextStyle bodyDescTextStyle = TextStyle(
     fontWeight: FontWeight.w400,
     letterSpacing: 10,
     color: kcGrey300Color);
+
+// description - + interlettrage
+const TextStyle bodyLinkTextStyle = TextStyle(
+    fontFamily: "RedHatText",
+    fontSize: 8,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 2,
+    color: kcBlue500Color);
