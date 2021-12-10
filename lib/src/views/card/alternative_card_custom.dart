@@ -43,19 +43,25 @@ class AlternativeCardCustom extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              ListTileUpper(
-                mainTitle: mainTitle,
-                titleCard: titleCard,
-                descriptionCard: descriptionCard,
-                urlBackground: urlBackground,
-                iconTrailing: iconTrailing,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8.0,0,8,0),
+                child: ListTileUpper(
+                  mainTitle: mainTitle,
+                  titleCard: titleCard,
+                  descriptionCard: descriptionCard,
+                  urlBackground: urlBackground,
+                  iconTrailing: iconTrailing,
+                ),
               ),
-              ListTileUpper(
-                mainTitle: mainTitle,
-                titleCard: titleCard,
-                descriptionCard: descriptionCard,
-                urlBackground: urlBackground,
-                iconTrailing: iconTrailing,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8.0,0,8,0),
+                child: ListTileUpper(
+                  mainTitle: mainTitle,
+                  titleCard: titleCard,
+                  descriptionCard: descriptionCard,
+                  urlBackground: urlBackground,
+                  iconTrailing: iconTrailing,
+                ),
               ),
             ],
           ),

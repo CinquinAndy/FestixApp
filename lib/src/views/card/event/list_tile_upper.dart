@@ -52,7 +52,7 @@ class ListTileUpper extends StatelessWidget {
               ),
             ),
           ),
-          color: kbgTransparentColor,
+          color: kbgGreyTransparentColor,
           // elevation: 10,
         ),
       ),
