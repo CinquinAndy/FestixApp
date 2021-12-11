@@ -77,8 +77,8 @@ class Home extends StatelessWidget {
           ),
           const CustomNavBar(
             isHomeSelectionned: false,
-            isEventsSelectionned: false,
-            isFestivalSelectionned: true,
+            isFestivalsSelectionned: false,
+            isArtistsSelectionned: true,
           )
         ],
       ),

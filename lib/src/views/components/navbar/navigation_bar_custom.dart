@@ -5,10 +5,10 @@ import 'nav_button_custom.dart';
 
 class CustomNavBar extends StatelessWidget {
   final bool isHomeSelectionned;
-  final bool isEventsSelectionned;
-  final bool isFestivalSelectionned;
+  final bool isFestivalsSelectionned;
+  final bool isArtistsSelectionned;
 
-  const CustomNavBar({Key? key, this.isHomeSelectionned = true, this.isEventsSelectionned = false, this.isFestivalSelectionned = false}) : super(key: key);
+  const CustomNavBar({Key? key, this.isHomeSelectionned = true, this.isFestivalsSelectionned = false, this.isArtistsSelectionned = false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +19,12 @@ class CustomNavBar extends StatelessWidget {
             icon: Icon(Icons.home_rounded, color: isHomeSelectionned ? kcBlue500Color : kcGrey300Color),
             isSelectionned: isHomeSelectionned),
         CustomNavButton(
-          icon: Icon(Icons.event_rounded, color: isEventsSelectionned ? kcBlue500Color : kcGrey300Color),
-          isSelectionned: isEventsSelectionned,
+          icon: Icon(Icons.event_rounded, color: isFestivalsSelectionned ? kcBlue500Color : kcGrey300Color),
+          isSelectionned: isFestivalsSelectionned,
         ),
         CustomNavButton(
-          icon: Icon(Icons.audiotrack_rounded, color: isFestivalSelectionned ? kcBlue500Color : kcGrey300Color),
-          isSelectionned: isFestivalSelectionned,
+          icon: Icon(Icons.audiotrack_rounded, color: isArtistsSelectionned ? kcBlue500Color : kcGrey300Color),
+          isSelectionned: isArtistsSelectionned,
         ),
       ],
     );
