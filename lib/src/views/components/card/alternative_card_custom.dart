@@ -55,7 +55,7 @@ class AlternativeCardCustom extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(8.0,0,8,0),
+                padding: const EdgeInsets.fromLTRB(8.0,0,8.0,0),
                 child: ListTileUpper(
                   mainTitle: mainTitle,
                   titleCard: titleCard,

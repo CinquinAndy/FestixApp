@@ -7,6 +7,10 @@ class BoxText extends StatelessWidget {
   final TextStyle style;
   TextAlign textAlign = TextAlign.start;
 
+
+  BoxText.headingFat(this.text, {Key? key, Color color = kcGrey50Color, this.textAlign = TextAlign.start})
+      : style = headingFatStyle.copyWith(color: color), super(key: key);
+
   BoxText.heading1(this.text, {Key? key, Color color = kcGrey50Color, this.textAlign = TextAlign.start})
       : style = heading1Style.copyWith(color: color), super(key: key);
 
@@ -15,6 +19,9 @@ class BoxText extends StatelessWidget {
 
   BoxText.heading3(this.text, {Key? key, Color color = kcGrey50Color, this.textAlign = TextAlign.start})
       : style = heading3Style.copyWith(color: color), super(key: key);
+
+  BoxText.heading3_5(this.text, {Key? key, Color color = kcGrey50Color, this.textAlign = TextAlign.start})
+      : style = heading3_5Style.copyWith(color: color), super(key: key);
 
   BoxText.heading4(this.text, {Key? key, Color color = kcGrey50Color, this.textAlign = TextAlign.start})
       : style = heading4Style.copyWith(color: color), super(key: key);

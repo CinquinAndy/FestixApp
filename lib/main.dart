@@ -1,5 +1,5 @@
 import 'package:b3_festix/src/views/pages/artists.dart';
-import 'package:b3_festix/src/views/pages/events.dart';
+import 'package:b3_festix/src/views/pages/festivals.dart';
 import 'package:b3_festix/src/views/pages/home.dart';
 import 'package:flutter/material.dart';
 
@@ -19,11 +19,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Home(title),
-      routes:<String,WidgetBuilder>{
-        '/home':(BuildContext context) => const Home("FESTIX"),
-        '/events':(BuildContext context) => const Event("FESTIX"),
-        '/artists':(BuildContext context) => const Artist("FESTIX"),
+      home: Home(
+        title,
+        backtitle: "",
+      ),
+      routes: <String, WidgetBuilder>{
+        '/home': (BuildContext context) => const Home(
+              "FESTIX",
+              backtitle: "",
+            ),
+        '/artists': (BuildContext context) => const Artist(
+              "FESTIX",
+              backtitle: "Artists",
+            ),
+        '/festivals': (BuildContext context) => const Festivals(
+              "FESTIX",
+              backtitle: "Festivals",
+            ),
       },
     );
   }

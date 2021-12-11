@@ -7,13 +7,16 @@ import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
   final String title;
+  final String backtitle;
 
-  const Home(this.title, {Key? key}) : super(key: key);
+  const Home(this.title, {Key? key, required this.backtitle}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MainPersonnalizedScafold(
       title: title,
+      backtitle: backtitle,
+      isHome: true,
       content: Column(
         children: [
           Expanded(
@@ -76,9 +79,9 @@ class Home extends StatelessWidget {
             ),
           ),
           const CustomNavBar(
-            isHomeSelectionned: false,
+            isHomeSelectionned: true,
             isFestivalsSelectionned: false,
-            isArtistsSelectionned: true,
+            isArtistsSelectionned: false,
           )
         ],
       ),

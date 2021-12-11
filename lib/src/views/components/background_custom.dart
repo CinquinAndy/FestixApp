@@ -7,8 +7,14 @@ import 'package:flutter/material.dart';
 class MainPersonnalizedScafold extends StatelessWidget {
   final Widget content;
   final String title;
+  final String backtitle;
+  final bool isHome;
 
-  const MainPersonnalizedScafold({Key? key, required this.content, required this.title})
+  const MainPersonnalizedScafold(
+      {Key? key,
+      required this.content,
+      required this.title,
+      required this.isHome, required this.backtitle})
       : super(key: key);
 
   @override
@@ -27,16 +33,35 @@ class MainPersonnalizedScafold extends StatelessWidget {
                       child: Container(
                         // ****************************** Gradient Mid left
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(20.0,20,20.0,0),
-                          child: Scaffold(
-                            backgroundColor: Colors.transparent,
-                            appBar: AppBar(
-                              centerTitle: true,
-                              title: BoxText.heading2(title),
-                              backgroundColor: Colors.transparent,
-                              elevation: 0.0,
-                            ),
-                            body: content,
+                          padding: const EdgeInsets.fromLTRB(20.0, 20, 20.0, 0),
+                          child: Stack(
+                            children: [
+                              Scaffold(
+                                backgroundColor: Colors.transparent,
+                                appBar: isHome
+                                    ? AppBar(
+                                        centerTitle: true,
+                                        title: BoxText.heading2(title),
+                                        backgroundColor: Colors.transparent,
+                                        elevation: 0.0,
+                                      )
+                                    : AppBar(
+                                        title: BoxText.heading3_5(
+                                          title,
+                                          color: kcGrey200Color,
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                        elevation: 0.0,
+                                      ),
+                                body: content,
+                              ),
+                              Positioned(
+                                bottom: 100,
+                                left: -20,
+                                child: RotatedBox(quarterTurns: 1,
+                                child: BoxText.headingFat(backtitle.toUpperCase(), color: kcGrey50OpacityColor,)),
+                              )
+                            ],
                           ),
                         ),
                         decoration: const BoxDecoration(

@@ -1,6 +1,12 @@
 import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:flutter/material.dart';
 
+const TextStyle headingFatStyle = TextStyle(
+    fontFamily: "RedHatText",
+    fontSize: 100,
+    fontWeight: FontWeight.w700,
+    letterSpacing: 0);
+
 const TextStyle heading1Style = TextStyle(
     fontFamily: "RedHatText",
     fontSize: 46,
@@ -13,15 +19,22 @@ const TextStyle heading2Style = TextStyle(
     fontWeight: FontWeight.w800,
     letterSpacing: 2);
 
+
 const TextStyle heading3Style = TextStyle(
     fontFamily: "RedHatText",
     fontSize: 28,
     fontWeight: FontWeight.w700,
     letterSpacing: 2);
 
+const TextStyle heading3_5Style = TextStyle(
+    fontFamily: "RedHatText",
+    fontSize: 22,
+    fontWeight: FontWeight.w700,
+    letterSpacing: 2);
+
 const TextStyle heading4Style = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: FontWeight.w700,
     letterSpacing: 2);
 
