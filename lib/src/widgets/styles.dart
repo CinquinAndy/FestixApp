@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 const TextStyle headingFatStyle = TextStyle(
     fontFamily: "RedHatText",
-    fontSize: 100,
+    fontSize: 80,
     fontWeight: FontWeight.w700,
-    letterSpacing: 0);
+    letterSpacing: 2);
 
 const TextStyle heading1Style = TextStyle(
     fontFamily: "RedHatText",

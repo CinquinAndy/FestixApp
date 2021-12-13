@@ -2,6 +2,7 @@ import 'package:b3_festix/box_ui.dart';
 import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:b3_festix/src/views/components/background_custom.dart';
 import 'package:b3_festix/src/views/components/card/alternative_card_custom.dart';
+import 'package:b3_festix/src/views/components/card/artist/artist_alternative_card_custom.dart';
 import 'package:b3_festix/src/views/components/card/basic_card_custom.dart';
 import 'package:b3_festix/src/views/components/navbar/navigation_bar_custom.dart';
 import 'package:flutter/material.dart';
@@ -23,8 +24,13 @@ class Artist extends StatelessWidget {
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                BoxText.heading3("Artist")
+              children: const [
+                Expanded(
+                  // width: 100,
+                  child: ArtistAlternativeCardCustom(
+                    mainTitle: "Tous les événements !",
+                  ),
+                ),
               ],
             ),
           ),
@@ -36,5 +42,6 @@ class Artist extends StatelessWidget {
         ],
       ),
     );
+
   }
 }

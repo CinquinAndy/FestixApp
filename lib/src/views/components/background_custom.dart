@@ -14,7 +14,8 @@ class MainPersonnalizedScafold extends StatelessWidget {
       {Key? key,
       required this.content,
       required this.title,
-      required this.isHome, required this.backtitle})
+      required this.isHome,
+      required this.backtitle})
       : super(key: key);
 
   @override
@@ -33,7 +34,9 @@ class MainPersonnalizedScafold extends StatelessWidget {
                       child: Container(
                         // ****************************** Gradient Mid left
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(20.0, 20, 20.0, 0),
+                          padding: isHome
+                              ? const EdgeInsets.fromLTRB(20.0, 20, 20.0, 0)
+                              : const EdgeInsets.fromLTRB(0, 20, 20, 0),
                           child: Stack(
                             children: [
                               Scaffold(
@@ -56,10 +59,14 @@ class MainPersonnalizedScafold extends StatelessWidget {
                                 body: content,
                               ),
                               Positioned(
-                                bottom: 100,
-                                left: -20,
-                                child: RotatedBox(quarterTurns: 1,
-                                child: BoxText.headingFat(backtitle.toUpperCase(), color: kcGrey50OpacityColor,)),
+                                bottom: 300,
+                                left: -15,
+                                child: RotatedBox(
+                                    quarterTurns: 1,
+                                    child: BoxText.headingFat(
+                                      backtitle.toUpperCase(),
+                                      color: kcGrey50OpacityColor,
+                                    )),
                               )
                             ],
                           ),

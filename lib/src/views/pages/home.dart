@@ -49,7 +49,7 @@ class Home extends StatelessWidget {
                     titleCard: "Nom de l'événement",
                     descriptionCard: "06 juillet • de 16h à 2h",
                     urlBackground:
-                        "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+                        "https://images.unsplash.com/photo-1599467556385-48b57868f038?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
                     iconTrailing: Icon(
                       Icons.chevron_right_rounded,
                       color: kcGrey50Color,
