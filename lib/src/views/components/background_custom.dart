@@ -9,13 +9,17 @@ class MainPersonnalizedScafold extends StatelessWidget {
   final String title;
   final String backtitle;
   final bool isHome;
+  final bool isPhotoBackgroundActivated;
+  final String urlPhoto;
 
   const MainPersonnalizedScafold(
       {Key? key,
       required this.content,
       required this.title,
       required this.isHome,
-      required this.backtitle})
+      required this.backtitle,
+      required this.isPhotoBackgroundActivated,
+      required this.urlPhoto})
       : super(key: key);
 
   @override
@@ -24,6 +28,28 @@ class MainPersonnalizedScafold extends StatelessWidget {
       backgroundColor: kbgGreyColor,
       body: Stack(
         children: [
+          isPhotoBackgroundActivated ? Positioned.fill(
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  opacity: 0.2,
+                  image: NetworkImage(urlPhoto),
+                ),
+              ),
+            ),
+          ) :
+          Positioned.fill(
+            child: Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  opacity: 0,
+                  image: AssetImage("assets/images/cardTicket.png"),
+                ),
+              ),
+            ),
+          ),
           Positioned.fill(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),

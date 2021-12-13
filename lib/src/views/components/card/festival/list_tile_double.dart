@@ -67,7 +67,10 @@ class CustomListTileDouble extends StatelessWidget {
                       padding: const EdgeInsets.all(0),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.of(context).pushNamed("/festival");
+                      },
                       icon: iconTrailingSecondary,
                       iconSize: 20,
                       padding: const EdgeInsets.all(0),

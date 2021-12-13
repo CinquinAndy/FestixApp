@@ -17,6 +17,8 @@ class Home extends StatelessWidget {
       title: title,
       backtitle: backtitle,
       isHome: true,
+      isPhotoBackgroundActivated: false,
+      urlPhoto: "",
       content: Column(
         children: [
           Expanded(

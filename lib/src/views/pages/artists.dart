@@ -19,6 +19,8 @@ class Artist extends StatelessWidget {
       title: title,
       backtitle: backtitle,
       isHome: false,
+      isPhotoBackgroundActivated: false,
+      urlPhoto: "",
       content: Column(
         children: [
           Expanded(
