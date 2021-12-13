@@ -82,6 +82,7 @@ class Home extends StatelessWidget {
             isHomeSelectionned: true,
             isFestivalsSelectionned: false,
             isArtistsSelectionned: false,
+            isSideTitleEnabled: false,
           )
         ],
       ),

@@ -38,6 +38,7 @@ class Festivals extends StatelessWidget {
             isHomeSelectionned: false,
             isFestivalsSelectionned: true,
             isArtistsSelectionned: false,
+            isSideTitleEnabled: true,
           )
         ],
       ),

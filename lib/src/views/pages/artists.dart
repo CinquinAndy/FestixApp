@@ -38,6 +38,7 @@ class Artist extends StatelessWidget {
             isHomeSelectionned: false,
             isFestivalsSelectionned: false,
             isArtistsSelectionned: true,
+            isSideTitleEnabled: true,
           )
         ],
       ),
