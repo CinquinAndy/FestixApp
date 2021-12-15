@@ -12,6 +12,8 @@ const Color kcGrey200Color = Color(0xffb6b4b7);
 const Color kcGrey100Color = Color(0xffcfced0);
 const Color kcGrey50Color = Color(0xffe8e8e9);
 const Color kcGrey50OpacityColor = Color(0x22e8e8e9);
+const Color kcGrey100OpacityColor = Color(0x11cfced0);
+
 
 // green
 const Color kcGreen500Color = Color(0xff4CAF50);

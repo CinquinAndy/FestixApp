@@ -1,3 +1,4 @@
+import 'package:b3_festix/src/views/pages/artist_specific.dart';
 import 'package:b3_festix/src/views/pages/artists.dart';
 import 'package:b3_festix/src/views/pages/festival_specific.dart';
 import 'package:b3_festix/src/views/pages/festivals.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       //   title,
       //   backtitle: "",
       // ),
-      home: FestivalSpecific(
+      home: ArtistSpecific(
         title,
         backtitle: "",
       ),
@@ -42,6 +43,10 @@ class MyApp extends StatelessWidget {
               backtitle: "Festivals",
             ),
         '/festival': (BuildContext context) => const FestivalSpecific(
+          "FESTIX",
+          backtitle: "",
+        ),
+        '/artist': (BuildContext context) => const ArtistSpecific(
           "FESTIX",
           backtitle: "",
         ),

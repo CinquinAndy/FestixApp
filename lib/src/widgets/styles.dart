@@ -48,6 +48,7 @@ const TextStyle heading5Style = TextStyle(
 const TextStyle bodyBaseTextStyle = TextStyle(
     fontFamily: "RedHatText",
     fontSize: 11,
+    height: 1.7,
     fontWeight: FontWeight.w500,
     letterSpacing: 2);
 

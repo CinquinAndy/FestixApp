@@ -5,11 +5,11 @@ import 'package:b3_festix/src/views/components/background_custom.dart';
 import 'package:b3_festix/src/views/components/navbar/navigation_bar_custom.dart';
 import 'package:flutter/material.dart';
 
-class FestivalSpecific extends StatelessWidget {
+class ArtistSpecific extends StatelessWidget {
   final String title;
   final String backtitle;
 
-  const FestivalSpecific(this.title, {Key? key, required this.backtitle})
+  const ArtistSpecific(this.title, {Key? key, required this.backtitle})
       : super(key: key);
 
   @override
@@ -20,7 +20,7 @@ class FestivalSpecific extends StatelessWidget {
       isHome: true,
       isPhotoBackgroundActivated: true,
       urlPhoto:
-          "https://images.unsplash.com/photo-1599467556385-48b57868f038?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+          "https://images.unsplash.com/photo-1606163015906-ad3c68002dcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80",
       content: Column(
         children: [
           Expanded(
@@ -35,7 +35,7 @@ class FestivalSpecific extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
                         child: BoxText.heading1(
-                          "Nom de l'événement",
+                          "Nom de l'artiste",
                           color: kcGrey200Color,
                         ),
                       ),
@@ -44,7 +44,7 @@ class FestivalSpecific extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                             child: BoxText.bodySub(
-                              "06 juillet - de 16h à 2h",
+                              "style de musique",
                               color: kcGrey200Color,
                               textAlign: TextAlign.start,
                             ),
