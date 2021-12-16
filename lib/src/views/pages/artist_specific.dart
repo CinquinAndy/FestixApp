@@ -82,7 +82,7 @@ class ArtistSpecific extends StatelessWidget {
             isHomeSelectionned: false,
             isFestivalsSelectionned: false,
             isArtistsSelectionned: false,
-            isSideTitleEnabled: false,
+            isSideTitleEnabled: true,
           )
         ],
       ),

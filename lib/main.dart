@@ -1,5 +1,6 @@
 import 'package:b3_festix/src/views/pages/artist_specific.dart';
 import 'package:b3_festix/src/views/pages/artists.dart';
+import 'package:b3_festix/src/views/pages/events.dart';
 import 'package:b3_festix/src/views/pages/festival_specific.dart';
 import 'package:b3_festix/src/views/pages/festivals.dart';
 import 'package:b3_festix/src/views/pages/home.dart';
@@ -21,11 +22,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+
       // home: Home(
       //   title,
       //   backtitle: "",
       // ),
-      home: ArtistSpecific(
+      home: Events(
         title,
         backtitle: "",
       ),
@@ -47,6 +49,10 @@ class MyApp extends StatelessWidget {
           backtitle: "",
         ),
         '/artist': (BuildContext context) => const ArtistSpecific(
+          "FESTIX",
+          backtitle: "",
+        ),
+        '/events': (BuildContext context) => const Events(
           "FESTIX",
           backtitle: "",
         ),

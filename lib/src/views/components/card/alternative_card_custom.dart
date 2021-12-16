@@ -2,7 +2,7 @@ import 'package:b3_festix/box_ui.dart';
 import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:flutter/material.dart';
 
-import 'event/list_tile_upper.dart';
+import 'festival/list_tile_upper.dart';
 
 class AlternativeCardCustom extends StatelessWidget {
   final String mainTitle;
