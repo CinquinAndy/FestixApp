@@ -1,4 +1,5 @@
 import 'package:b3_festix/box_ui.dart';
+import 'package:b3_festix/src/models/ArtistModel.dart';
 import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:b3_festix/src/shared/divider_custom.dart';
 import 'package:b3_festix/src/views/components/background_custom.dart';
@@ -14,78 +15,86 @@ class ArtistSpecific extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainPersonnalizedScafold(
-      title: title,
-      backtitle: backtitle,
-      isHome: true,
-      isPhotoBackgroundActivated: true,
-      urlPhoto:
-          "https://images.unsplash.com/photo-1606163015906-ad3c68002dcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80",
-      content: Column(
-        children: [
-          Expanded(
+    var args = ModalRoute.of(context)!.settings.arguments as dynamic;
+    args = args.first;
+
+    return args == null
+        ? Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                SizedBox(
+                  height: 40,
+                  width: 40,
+                  child: CircularProgressIndicator(
+                    semanticsLabel: 'Linear progress indicator',
+                  ),
+                ),
+              ],
+            ),
+          )
+        : MainPersonnalizedScafold(
+            title: title,
+            backtitle: backtitle,
+            isHome: true,
+            isPhotoBackgroundActivated: true,
+            urlPhoto: args.photoUrl,
+            content: Column(
               children: [
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20.0, 0, 20, 20),
+                Expanded(
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
+                      const Spacer(),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
-                        child: BoxText.heading1(
-                          "Nom de l'artiste",
-                          color: kcGrey200Color,
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                            child: BoxText.bodySub(
-                              "style de musique",
-                              color: kcGrey200Color,
-                              textAlign: TextAlign.start,
+                        padding: const EdgeInsets.fromLTRB(20.0, 0, 20, 20),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
+                              child: BoxText.heading1(
+                                args.artistName,
+                                color: kcGrey200Color,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.fromLTRB(10, 30.0, 10, 30),
-                        child: DividerCustom(
-                          height: 2,
-                          width: 600,
+                            Row(
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                  child: BoxText.bodySub(
+                                    args.musicStyle,
+                                    color: kcGrey200Color,
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.fromLTRB(10, 30.0, 10, 30),
+                              child: DividerCustom(
+                                height: 2,
+                                width: 600,
+                              ),
+                            ),
+                            BoxText.body(
+                              args.description,
+                              color: kcGrey300Color,
+                            )
+                          ],
                         ),
-                      ),
-                      BoxText.body(
-                        "Candy canes danish bear claw chocolate bar tootsie "
-                        "roll sesame snaps sesame snaps brownie. "
-                        "Fruitcake chocolate bar donut halvah dessert. "
-                        "Cake gingerbread halvah biscuit icing. Lemon drops cookie pie powder pastry "
-                        "sesame snaps fruitcake candy. Gummies gummies bonbon lollipop cotton candy wafer "
-                        "soufflé chocolate cake. Brownie pastry fruitcake donut sweet roll halvah dragée "
-                        "macaroon. Lollipop tart cookie tootsie roll chocolate bar dessert cake. Tart toffee "
-                        "jujubes cotton candy marshmallow donut liquorice macaroon. Chocolate bar chocolate cake "
-                        "topping ice cream candy biscuit marzipan. Gummies chocolate jelly-o cookie toffee jujubes "
-                        "gingerbread croissant marshmallow. Gingerbread gummies tootsie roll sesame snaps cotton candy t"
-                        "art liquorice brownie. Toffee dessert chocolate cake sweet jelly-o chupa chups sesame snaps.",
-                        color: kcGrey300Color,
                       )
                     ],
                   ),
+                ),
+                const CustomNavBar(
+                  isHomeSelectionned: false,
+                  isFestivalsSelectionned: false,
+                  isArtistsSelectionned: false,
+                  isSideTitleEnabled: true,
                 )
               ],
             ),
-          ),
-          const CustomNavBar(
-            isHomeSelectionned: false,
-            isFestivalsSelectionned: false,
-            isArtistsSelectionned: false,
-            isSideTitleEnabled: true,
-          )
-        ],
-      ),
-    );
+          );
   }
 }

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:b3_festix/src/models/ArtistModel.dart';
 import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class CustomListTileSimple extends StatelessWidget {
   final String descriptionCard;
   final String urlBackground;
   final Icon iconTrailing;
+  final dynamic artist;
 
   const CustomListTileSimple(
       {Key? key,
@@ -18,7 +20,8 @@ class CustomListTileSimple extends StatelessWidget {
       required this.titleCard,
       required this.descriptionCard,
       required this.urlBackground,
-      required this.iconTrailing})
+      required this.iconTrailing,
+      required this.artist})
       : super(key: key);
 
   @override
@@ -59,7 +62,19 @@ class CustomListTileSimple extends StatelessWidget {
                   child: Row(
                     children: [
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          Navigator.of(context)
+                              .pushNamed("/artist", arguments: {
+                            ArtistModel(
+                              artist['id'],
+                              artist['artistName'],
+                              artist['description'],
+                              artist['musicStyle'],
+                              artist['photoUrl'],
+                            )
+                          });
+                        },
                         icon: iconTrailing,
                         iconSize: 20,
                         padding: const EdgeInsets.all(0),

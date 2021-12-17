@@ -41,7 +41,7 @@ class _FestivalAlternativeCardCustomState extends State<FestivalAlternativeCardC
     return Column(
       children: [
         Expanded(
-          child: _loadedFestivals.length == 0
+          child: _loadedFestivals.isEmpty
               ? Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [

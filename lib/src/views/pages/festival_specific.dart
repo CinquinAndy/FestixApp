@@ -19,8 +19,6 @@ class FestivalSpecific extends StatelessWidget {
     var args = ModalRoute.of(context)!.settings.arguments as dynamic;
     args = args.first;
 
-    // print(args.id);
-
     return args == null
         ? Expanded(
             child: Column(
