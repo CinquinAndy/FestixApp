@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:b3_festix/src/models/FestivalModel.dart';
 import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class CustomListTileDouble extends StatelessWidget {
   final String descriptionCard;
   final String urlBackground;
   final Icon iconTrailing;
-  final Icon iconTrailingSecondary;
+  final dynamic festival;
 
   const CustomListTileDouble(
       {Key? key,
@@ -20,7 +21,7 @@ class CustomListTileDouble extends StatelessWidget {
       required this.descriptionCard,
       required this.urlBackground,
       required this.iconTrailing,
-      required this.iconTrailingSecondary})
+      required this.festival})
       : super(key: key);
 
   @override
@@ -52,32 +53,28 @@ class CustomListTileDouble extends StatelessWidget {
                       descriptionCard,
                       color: kcGrey300Color,
                     ),
-                  ),
-                ),
-              ),
-              Positioned(
-                right: 0,
-                bottom: 10,
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
+                    isThreeLine: false,
+                    trailing: IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.of(context)
+                            .pushNamed("/festival", arguments: {
+                          FestivalModel(
+                              festival['id'],
+                              festival['title'],
+                              festival['description'],
+                              festival['photoUrl'],
+                              DateTime.parse(festival['dateStart']),
+                              DateTime.parse(festival['dateEnd']))
+                        });
+                      },
                       icon: iconTrailing,
                       iconSize: 20,
                       padding: const EdgeInsets.all(0),
                     ),
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                        Navigator.of(context).pushNamed("/festival");
-                      },
-                      icon: iconTrailingSecondary,
-                      iconSize: 20,
-                      padding: const EdgeInsets.all(0),
-                    )
-                  ],
+                  ),
                 ),
-              )
+              ),
             ],
           ),
           color: kbgGreyTransparentColor,
@@ -89,6 +86,3 @@ class CustomListTileDouble extends StatelessWidget {
     ;
   }
 }
-
-
-

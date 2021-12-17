@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.cinquin.andy.b3_festix">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="b3_festix"
         android:name="${applicationName}"
