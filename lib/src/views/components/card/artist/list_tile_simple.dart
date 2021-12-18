@@ -57,30 +57,30 @@ class CustomListTileSimple extends StatelessWidget {
                 ),
               ),
               Positioned(
-                  right: 20,
-                  bottom: 10,
-                  child: Row(
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                          Navigator.of(context)
-                              .pushNamed("/artist", arguments: {
-                            ArtistModel(
-                              artist['id'],
-                              artist['artistName'],
-                              artist['description'],
-                              artist['musicStyle'],
-                              artist['photoUrl'],
-                            )
-                          });
-                        },
-                        icon: iconTrailing,
-                        iconSize: 20,
-                        padding: const EdgeInsets.all(0),
-                      ),
-                    ],
-                  ))
+                right: 20,
+                bottom: 10,
+                child: Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.of(context).pushNamed("/artist", arguments: {
+                          ArtistModel(
+                            artist['id'],
+                            artist['artistName'],
+                            artist['description'],
+                            artist['musicStyle'],
+                            artist['photoUrl'],
+                          )
+                        });
+                      },
+                      icon: iconTrailing,
+                      iconSize: 20,
+                      padding: const EdgeInsets.all(0),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
           color: kbgGreyTransparentColor,
