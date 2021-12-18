@@ -29,7 +29,6 @@ class _HomeState extends State<Home> {
 
   Map<String, dynamic> _loadedFestival = {};
   Map<String, dynamic> _loadedArtist = {};
-  Map<String, dynamic> _loadedEvents = {};
 
   Future<void> _fetchDataArtist() async {
     final response = await http.get(Uri.parse(API_URL + "/festival/last/"));
@@ -44,15 +43,6 @@ class _HomeState extends State<Home> {
     final data = json.decode(utf8.decode(response.bodyBytes));
     setState(() {
       _loadedArtist = data;
-      _fetchDataEvents();
-    });
-  }
-
-  Future<void> _fetchDataEvents() async {
-    final response = await http.get(Uri.parse(API_URL + "/festival/list/"));
-    final data = json.decode(utf8.decode(response.bodyBytes));
-    setState(() {
-      _loadedEvents = data;
     });
   }
 
@@ -86,7 +76,7 @@ class _HomeState extends State<Home> {
                           ],
                         )
                       : BasicCardCustom(
-                          mainTitle: "Évènement du moment !",
+                          mainTitle: "Festival du moment !",
                           pathBackground: "assets/images/cardTicket.png",
                           urlPhoto: _loadedFestival['data']['festivals']
                               ['photoUrl'],
@@ -103,25 +93,12 @@ class _HomeState extends State<Home> {
                         ),
                 ),
                 const SizedBox(
-                  height: 10,
-                ),
-                const SizedBox(
                   // width: 100,
                   height: 240,
-                  child: AlternativeCardCustom(
-                    mainTitle: "Evènements recommandés !",
-                    titleCard: "Nom de l'événement",
-                    descriptionCard: "06 juillet • de 16h à 2h",
-                    urlBackground:
-                        "https://images.unsplash.com/photo-1599467556385-48b57868f038?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-                    iconTrailing: Icon(
-                      Icons.chevron_right_rounded,
-                      color: kcGrey50Color,
-                    ),
-                  ),
+                  child: AlternativeCardCustom(),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 SizedBox(
                   height: 200,

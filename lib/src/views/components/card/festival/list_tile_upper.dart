@@ -1,9 +1,9 @@
+import 'package:b3_festix/src/models/FestivalModel.dart';
 import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
 import '../../../../../box_ui.dart';
-
 
 class ListTileUpper extends StatelessWidget {
   final String mainTitle;
@@ -11,6 +11,7 @@ class ListTileUpper extends StatelessWidget {
   final String descriptionCard;
   final String urlBackground;
   final Icon iconTrailing;
+  final dynamic festival;
 
   const ListTileUpper(
       {Key? key,
@@ -18,7 +19,8 @@ class ListTileUpper extends StatelessWidget {
       required this.titleCard,
       required this.descriptionCard,
       required this.urlBackground,
-      required this.iconTrailing})
+      required this.iconTrailing,
+      required this.festival})
       : super(key: key);
 
   @override
@@ -49,8 +51,23 @@ class ListTileUpper extends StatelessWidget {
                   descriptionCard,
                   color: kcGrey300Color,
                 ),
-                trailing: iconTrailing,
-
+                trailing: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).pushNamed("/festival", arguments: {
+                      FestivalModel(
+                          festival['id'],
+                          festival['title'],
+                          festival['description'],
+                          festival['photoUrl'],
+                          DateTime.parse(festival['dateStart']),
+                          DateTime.parse(festival['dateEnd']))
+                    });
+                  },
+                  icon: iconTrailing,
+                  iconSize: 20,
+                  padding: const EdgeInsets.all(0),
+                ),
               ),
             ),
           ),
