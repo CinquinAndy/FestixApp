@@ -24,10 +24,7 @@ class Events extends StatelessWidget {
       content: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: const [
-          EventDayList(
-            date: "03.12.21.",
-            listEvent: <String,String>{},
-          ),
+          EventDayList(),
           CustomNavBar(
             isHomeSelectionned: false,
             isFestivalsSelectionned: false,

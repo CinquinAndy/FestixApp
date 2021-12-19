@@ -32,7 +32,7 @@ class CustomNavBar extends StatelessWidget {
             toWhere: enum_routesnames.home,
           ),
           CustomNavButton(
-            icon: Icon(Icons.event_rounded,
+            icon: Icon(Icons.celebration_rounded,
                 color:
                     isFestivalsSelectionned ? kcBlue500Color : kcGrey300Color),
             isSelectionned: isFestivalsSelectionned,

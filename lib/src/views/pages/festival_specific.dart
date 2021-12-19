@@ -59,6 +59,7 @@ class FestivalSpecific extends StatelessWidget {
                               ),
                             ),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
                                   padding:
@@ -69,6 +70,23 @@ class FestivalSpecific extends StatelessWidget {
                                     textAlign: TextAlign.start,
                                   ),
                                 ),
+                                IconButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                    Navigator.of(context)
+                                        .pushNamed("/events", arguments: {
+                                      FestivalModel(
+                                          args.id,
+                                          args.title,
+                                          args.description,
+                                          args.photoUrl,
+                                          args.dateStart,
+                                          args.dateEnd)
+                                    });
+                                  },
+                                  icon: const Icon(Icons.event_rounded),
+                                  color: kcGrey100Color,
+                                )
                               ],
                             ),
                             const Padding(
