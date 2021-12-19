@@ -23,11 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-      // home: Home(
-      //   title,
-      //   backtitle: "",
-      // ),
-      home: Events(
+      home: Home(
         title,
         backtitle: "",
       ),

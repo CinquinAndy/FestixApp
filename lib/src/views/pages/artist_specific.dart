@@ -16,7 +16,9 @@ class ArtistSpecific extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)!.settings.arguments as dynamic;
-    args = args.first;
+    if (args != null) {
+      args = args.first;
+    }
 
     return args == null
         ? Expanded(

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:b3_festix/box_ui.dart';
 import 'package:b3_festix/src/constants/constants.dart';
+import 'package:b3_festix/src/models/ArtistModel.dart';
 import 'package:b3_festix/src/shared/app_colors.dart';
 import 'package:b3_festix/src/shared/divider_custom.dart';
 import 'package:b3_festix/src/utils/FormatDate.dart';
@@ -21,6 +22,18 @@ class _EventDayListState extends State<EventDayList> {
     super.initState();
     flag = false;
     args = '';
+    _fetchDataArtists();
+  }
+
+  Map<String, dynamic> _loadedArtists = {};
+
+  Future<void> _fetchDataArtists() async {
+    final response = await http.get(Uri.parse(API_URL + "/artist/list/"));
+    final data = json.decode(utf8.decode(response.bodyBytes));
+
+    setState(() {
+      _loadedArtists = data;
+    });
   }
 
   bool flag = false;
@@ -33,6 +46,21 @@ class _EventDayListState extends State<EventDayList> {
     setState(() {
       _loadedEvents = data;
     });
+  }
+
+  ArtistModel? getArtistByName(String artistEnAvant){
+    for (var artist in _loadedArtists['data']['artists']){
+      if(artist['artistName'] == artistEnAvant){
+        return ArtistModel(
+            artist['id'],
+            artist['artistName'],
+            artist['description'],
+            artist['musicStyle'],
+            artist['photoUrl'],
+        );
+      }
+    }
+    return null;
   }
 
   Padding buildContent() {
@@ -55,7 +83,9 @@ class _EventDayListState extends State<EventDayList> {
                   child: IconButton(
                     onPressed: () {
                       Navigator.of(context).pop();
-                      Navigator.of(context).pushNamed("/artist");
+                      Navigator.of(context).pushNamed("/artist", arguments: {
+                        getArtistByName(_loadedEvents['data']['events'][i]['artistEnAvant'])
+                      });
                     },
                     icon: const Icon(
                       Icons.info,
