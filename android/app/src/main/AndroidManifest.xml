@@ -2,7 +2,7 @@
     package="fr.cinquin.andy.b3_festix">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="b3_festix"
+        android:label="Festix"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
